@@ -1,3 +1,5 @@
+
+
 // Función que multiplique 2 números enteros
 def multiplicar(valorA: Int = 0, valorB: Int = 0): Int = valorA * valorB
 
@@ -10,7 +12,13 @@ def saludo(nombre: String = "extraño"):Unit = println(s"Hola $nombre")
 // Factorial con recursividad
 def factorial(number: Int): Long = if number != 1 then number.toLong * factorial(number-1) else number
 
+// Maximo valor de una lista, sin usar max
+def maximo(array: Array[Int]) :Int =
+  var max = 0
+  array.foreach(x => if x > max then max = x)
+  max
+
 
 @main
 def pruebaEjercicio2: Unit =
-  println(factorial(18))
+  println(maximo(Array(12,34,56,2,1,3,45,6,2)))
