@@ -6,5 +6,4 @@ def medallero(posicion:Int = 0): String = posicion match
   case 3 => "Has obtenido la medalla de bronce"
   case _ => "Buen intento al haber participado, mejor suerte para la próxima"
 
-
 @main def ejercicio3 : Unit = println(medallero())
