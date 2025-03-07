@@ -14,7 +14,7 @@ object paises:
     case _ => "País no seleccionado"
   end isPais
 
-  def fromName(name: String): Any = name match
+  def fromName(name: String): Any = name.toUpperCase() match
     case "MX" => Paises.MX
     case "USA" => Paises.USA
     case "CU" => Paises.CU
