@@ -4,6 +4,8 @@ import java.util.Random.*
 import java.util.{Date, Scanner}
 import scala.util.Random
 
+// Esto es un juego de comprobación de rendimiento de un ordenador. Dale al ordenador un número y observa cuanto tiempo pasa en adivinar el número
+
 @main def interfaz_principal : Unit =
   println("Indique que número desea que el ordenador le adivine en el rango de: -999999999999999999 y 999999999999999999L")
   val s = new Scanner(System.in).nextLong()
