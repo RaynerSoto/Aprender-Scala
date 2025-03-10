@@ -10,8 +10,8 @@ package course2
 
 class Coche(marca: String, modelo: String, annoLanzamiento: Int,duenno:Driver) {
   def difenciaEdadDuennoCar: String = annoLanzamiento match
-    case _ if annoLanzamiento > duenno.getAnnoNacimiento => s"El coche fue desarrallado ${annoLanzamiento-duenno.getAnnoNacimiento} antes del nacimiento de su dueño"
-    case _ if annoLanzamiento < duenno.getAnnoNacimiento => s"El chofer nació ${duenno.getAnnoNacimiento-annoLanzamiento} antes de la construcción del carro"
+    case annoLanzamientoo if annoLanzamiento > duenno.getAnnoNacimiento => s"El coche fue desarrallado ${annoLanzamiento-duenno.getAnnoNacimiento} antes del nacimiento de su dueño"
+    case annoLanzamientoo if annoLanzamiento < duenno.getAnnoNacimiento => s"El chofer nació ${duenno.getAnnoNacimiento-annoLanzamiento} antes de la construcción del carro"
     case _ => "Ambos tienen la misma edad"
   end difenciaEdadDuennoCar
   def actualizarAnnoCarro(anno:Int) = new Coche(marca,modelo,anno, duenno)
@@ -24,13 +24,13 @@ class Driver(nombre: String,apellidos: String,annoNacimiento:Int) {
   def getNombre: String = this.nombre
   def getApellidos:String = this.apellidos
 
-  @Override override def equals(obj: Any): Option[Boolean] = {
+  @Override override def equals(obj: Any):Boolean = {
     try{
       obj match
-        case x if this.nombre == obj.asInstanceOf[Driver].getNombre && this.apellidos == obj.asInstanceOf[Driver].getApellidos && this.annoNacimiento == obj.asInstanceOf[Driver].getAnnoNacimiento => Some(true)
-        case _ => Some(false)
+        case x if this.nombre == obj.asInstanceOf[Driver].getNombre && this.apellidos == obj.asInstanceOf[Driver].getApellidos && this.annoNacimiento == obj.asInstanceOf[Driver].getAnnoNacimiento => true
+        case _ => false
     }catch
-      case e: Exception => 
+      case e: Exception => false
   }
 
 }
