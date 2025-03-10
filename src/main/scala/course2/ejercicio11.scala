@@ -10,8 +10,8 @@ package course2
 
 class Coche(marca: String, modelo: String, annoLanzamiento: Int,duenno:Driver) {
   def difenciaEdadDuennoCar: String = annoLanzamiento match
-    case annoLanzamientoo if annoLanzamiento > duenno.getAnnoNacimiento => s"El coche fue desarrallado ${annoLanzamiento-duenno.getAnnoNacimiento} antes del nacimiento de su dueño"
-    case annoLanzamientoo if annoLanzamiento < duenno.getAnnoNacimiento => s"El chofer nació ${duenno.getAnnoNacimiento-annoLanzamiento} antes de la construcción del carro"
+    case annoLanzamientoo if annoLanzamiento < duenno.getAnnoNacimiento => s"El coche fue desarrallado ${annoLanzamiento-duenno.getAnnoNacimiento} antes del nacimiento de su dueño"
+    case annoLanzamientoo if annoLanzamiento > duenno.getAnnoNacimiento => s"El chofer nació ${duenno.getAnnoNacimiento-annoLanzamiento} antes de la construcción del carro"
     case _ => "Ambos tienen la misma edad"
   end difenciaEdadDuennoCar
   def actualizarAnnoCarro(anno:Int) = new Coche(marca,modelo,anno, duenno)
