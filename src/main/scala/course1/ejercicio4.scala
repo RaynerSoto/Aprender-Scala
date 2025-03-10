@@ -1,3 +1,5 @@
+package course1
+
 // Ejercicio sobre un país y su población
 case class Country(nombre:String, poblacion:Int):
   def nombrePais:String = s"País: ${nombre} con una población de ${poblacion} de personas"

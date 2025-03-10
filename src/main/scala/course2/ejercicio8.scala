@@ -1,3 +1,5 @@
+package course2
+
 import scala.annotation.tailrec
 // Ejercicio sobre recursividad
 

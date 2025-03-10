@@ -1,3 +1,5 @@
+package course1
+
 // Imprimir según la posición en una competición, que medalle obtuvo
 def medallero(posicion:Int = 0): String = posicion match
   case 0 => "No has participado en esta competición"

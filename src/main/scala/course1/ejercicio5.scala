@@ -1,8 +1,10 @@
+package course1
+
 enum UnitedKingdom:
   case England,NothernIreland,Scotland,Wales
 end UnitedKingdom
 
-import UnitedKingdom._
+import course1.UnitedKingdom.*
 def malditosEscoceses(pais:UnitedKingdom = Scotland) = if pais.equals(Scotland) then "Malditos escoceses han arruinado Escocia" else "No te llevaste el chiste"
 
 def reescrituraEspañol(pais:UnitedKingdom) = pais match

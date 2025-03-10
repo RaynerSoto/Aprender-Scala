@@ -1,3 +1,5 @@
+package course1
+
 
 
 // Función que multiplique 2 números enteros

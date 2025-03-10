@@ -1,4 +1,6 @@
-import Paises._
+package course1
+
+import course1.Paises.*
 
 enum Paises:
   case MX,USA,CU,GD,AR
