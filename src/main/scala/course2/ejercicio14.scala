@@ -22,6 +22,13 @@ def numerosPrimos(): List[Int] = {
   numerosRecursivos().filter(isPrimo(_))
 }
 
+/*
+ De una lista de números dar los dígitos de esa lista
+*/
+def numerosDigitos(valor:List[Int]) = {
+  valor.flatMap(s => s.toString.map(s => s.asDigit).toList)
+}
+
 @main def ejercio14(): Unit = {
-  println(numerosPrimos())
+  println(numerosDigitos(numerosPrimos()))
 }
